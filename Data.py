@@ -4,14 +4,19 @@ class Data:
         self.message = ''
 
     def send(self, socket):
-        self.message = input(" -> ")  # take input
+        # take input
+        self.message = input(" -> ")
 
-        socket.send(self.message.encode())  # send message
+        # send message
+        socket.send(self.message.encode())
         print("sent")
+
+        # check if exit
         return self.message
 
     def receive(self, socket):
-        self.data = socket.recv(1024).decode()  # receive response
+        # receive response
+        self.data = socket.recv(1024).decode()
 
-        print('Received from server: ' + self.data)  # show in terminal
-        print("received")
+        # show in terminal
+        print('Received from server: ' + self.data)
