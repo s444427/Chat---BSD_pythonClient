@@ -11,8 +11,11 @@ if __name__ == '__main__':
     data = Data()
 
     # Exchange data
-    for i in range(2):
-        data.send(server.client_socket)
+    message = data.send(server.client_socket)
+    data.receive(server.client_socket)
+
+    while message != 'exit':
+        message = data.send(server.client_socket)
         data.receive(server.client_socket)
 
     # Disconnect
