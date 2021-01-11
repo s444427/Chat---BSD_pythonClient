@@ -14,6 +14,7 @@ if __name__ == '__main__':
     data = Data()
 
     # Exchange data
+    data.intialise(server.client_socket)
     message = data.send(server.client_socket)
     data.receive(server.client_socket)
 

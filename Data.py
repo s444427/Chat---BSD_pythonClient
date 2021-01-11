@@ -5,6 +5,17 @@ class Data:
         self.file = open('receive.txt', 'wb')
         self.counter = 0
 
+    def initialise(self, socket):
+        # take input
+        self.message = 'csharp'
+
+        # send message
+        socket.send(self.message.encode())
+        print("Inicialised on python side")
+
+        # check if exit
+        return self.message
+
     def send(self, socket):
         # take input
         self.message = input()
