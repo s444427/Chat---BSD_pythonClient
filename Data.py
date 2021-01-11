@@ -11,13 +11,14 @@ class Data:
         print(self.message)
 
         # send message
-        socket.send(self.message)
+        socket.send(self.message.encode())
         print("sent")
 
         # check if exit
         return self.message
 
     def receive(self, socket):
+        print('Waiting for response')
         # receive response
         self.package = socket.recv(4096)
 
