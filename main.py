@@ -1,8 +1,11 @@
+#!/usr/bin/env python
+
 from Connection import Connection
 from Data import Data
 
 if __name__ == '__main__':
 
+    message = ''
     # Set connection with server
     server = Connection()
     server.connect()
