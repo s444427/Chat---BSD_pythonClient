@@ -36,8 +36,10 @@ class Data:
         while self.package:
             print('Receiving')
             self.file.write(self.package)
+            print(self.package)
             self.counter = self.counter + 1
-            print('Received ' + self.counter + 'package/s')
-            self.package = socket.recv(1024)
+            print('Received ' + str(self.counter) + ' package/s')
+            self.package = socket.recv(4096)
 
+        self.file.close()
         print('Receiving finished')
