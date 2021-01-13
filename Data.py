@@ -7,7 +7,7 @@ class Data:
 
     def initialise(self, socket):
         # take input
-        self.message = 'csharp'
+        self.message = 'custom'
 
         # send message
         socket.send(self.message.encode())
