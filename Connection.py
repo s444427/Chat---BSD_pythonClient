@@ -10,7 +10,7 @@ class Connection:
     def connect(self):
         self.client_socket = socket.socket()  # instantiate
         self.client_socket.connect((self.host, self.port))  # connect to the server
-        print("Hello World!")
+        print('Connected to server')
 
     def disconnect(self):
         self.client_socket.close()  # close the connection
